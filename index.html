@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Symplyn — Digital Development Studio</title>
+  <meta name="description" content="Symplyn builds websites, web apps, and mobile applications for individuals and businesses. Clean code. Real results." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">SYMPLYN</div>
+      <div class="loader-bar"><span></span></div>
+      <div class="loader-text">Launching Symplyn...</div>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">SYMPLYN</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Start Project</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about"    class="mob-link">About</a></li>
+        <li><a href="#services" class="mob-link">Services</a></li>
+        <li><a href="#why"      class="mob-link">Why Us</a></li>
+        <li><a href="#process"  class="mob-link">Process</a></li>
+        <li><a href="#portfolio" class="mob-link">Work</a></li>
+        <li><a href="#contact"  class="mob-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <!-- Backgrounds -->
+      <!-- <div class="hero-mesh"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <div class="hero-ring ring-1"></div>
+      <div class="hero-ring ring-2"></div> -->
+
+      <!-- Floating decorative cards REMOVED for clean Vanta look -->
+
+      <div class="hero-container">
+        <div class="hero-badge reveal">
+          <span class="badge-dot"></span>
+          Available for Projects
+        </div>
+        <h1 class="hero-headline reveal">
+          <span class="line">What you imagine,</span>
+          <span class="line"><span class="gradient-word">we'll formulate.</span></span>
+        </h1>
+        <p class="hero-sub reveal">
+          Symplyn is an independent development studio crafting <strong>websites, web apps,</strong> and <strong>mobile applications</strong> for individuals and businesses — with clean code, honest timelines, and zero middlemen.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#contact" class="btn btn-primary">
+            <span>Start a Project</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#portfolio" class="btn btn-ghost">View Work</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat"><span class="stat-num">2+</span><span class="stat-label">Years Experience</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">6–7</span><span class="stat-label">Apps Shipped</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Technologies</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Months Interned</span></div>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-label reveal">About Symplyn</div>
+      <div class="about-grid">
+        <div class="about-left reveal from-left">
+          <h2 class="section-title">Independent. Focused.<br/><span class="accent">Results-driven.</span></h2>
+          <p class="body-text">Symplyn is a one-person development studio run by <strong>Parv Mer</strong> — a Flutter developer and full-stack builder with 2+ years of hands-on experience and a 4 month on-site internship at Divine IT Solutions, Rajkot.</p>
+          <p class="body-text">I work directly with clients — no account managers, no outsourcing, no fluff. Just clean, maintainable code delivered on time.</p>
+          <p class="body-text">From real-time GPS tracking apps to business websites and scalable applications. I’ve built and delivered real-world solutions. Currently pursuing MCA at JAIN University, Bangalore.</p>
+          <div class="about-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Web Dev</span>
+            <span class="tag">Mobile Apps</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">OpenStreetMap</span>
+            <span class="tag">GetX</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+        <div class="about-right reveal from-right">
+          <div class="about-card">
+            <div class="about-avatar">PM</div>
+            <div class="about-info">
+              <h3>Parv Mer</h3>
+              <p>Flutter Developer & Full-Stack Builder</p>
+              <div class="about-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Based in Rajkot, India
+              </div>
+            </div>
+            <div class="about-journey">
+              <div class="journey-item">
+                <span class="journey-year">2022</span>
+                <span class="journey-desc">BCA — Atmiya University, Rajkot</span>
+              </div>
+              <div class="journey-item">
+                <span class="journey-year">2024</span>
+                <span class="journey-desc">Mastered Flutter & Firebase development</span>
+              </div>
+              <div class="journey-item">
+                <span class="journey-year">2025</span>
+                <span class="journey-desc">4-month internship , Divine IT Solutions</span>
+              </div>
+              <div class="journey-item active">
+                <span class="journey-year">Now</span>
+                <span class="journey-desc">MCA , JAIN University + Running Symplyn</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="section-label reveal">What I Build</div>
+      <h2 class="section-title reveal">Services</h2>
+      <p class="section-sub reveal">Clean solutions for real problems. No bloat, no fluff — just what you need, built right.</p>
+      <div class="services-grid">
+
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Website Development</h3>
+          <p>Fast, responsive, and SEO-ready websites built from scratch — from business pages to full multi-page sites.</p>
+          <div class="service-tags"><span>HTML/CSS/JS</span><span>Responsive</span><span>SEO-ready</span></div>
+        </div>
+
+        <div class="service-card reveal" data-delay="1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Web Applications</h3>
+          <p>Dashboards, admin panels, management systems, and internal tools — built for real workflows.</p>
+          <div class="service-tags"><span>Dashboards</span><span>Systems</span><span>Portals</span></div>
+        </div>
+
+        <div class="service-card reveal" data-delay="2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3>Mobile App Development</h3>
+          <p>Cross-platform apps for Android & iOS using Flutter — production-ready with clean architecture.</p>
+          <div class="service-tags"><span>Flutter</span><span>Android</span><span>iOS</span></div>
+        </div>
+
+        <div class="service-card reveal" data-delay="3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>Landing Pages</h3>
+          <p>High-converting, visually sharp landing pages designed to capture attention and turn visitors into clients.</p>
+          <div class="service-tags"><span>Conversion</span><span>Fast</span><span>Premium UI</span></div>
+        </div>
+
+        <div class="service-card reveal" data-delay="4">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Bug Fixing & Improvements</h3>
+          <p>Got a broken app or messy codebase? I'll diagnose, fix, and clean it up with full transparency.</p>
+          <div class="service-tags"><span>Debugging</span><span>Performance</span><span>Refactor</span></div>
+        </div>
+
+        <div class="service-card reveal" data-delay="5">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Maintenance & Support</h3>
+          <p>Ongoing updates, monitoring, and support to keep your product running smoothly long after launch.</p>
+          <div class="service-tags"><span>Updates</span><span>Monitoring</span><span>Support</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY SYMPLYN ===== -->
+  <section id="why" class="why section">
+    <div class="container">
+      <div class="section-label reveal">Why Choose Symplyn</div>
+      <h2 class="section-title reveal">Serious about <span class="accent">your product.</span></h2>
+      <div class="why-grid">
+        <div class="why-card reveal" data-delay="0">
+          <div class="why-num">01</div>
+          <h3>Clean & Maintainable Code</h3>
+          <p>Every line written with structure and readability in mind. No spaghetti. No shortcuts that break in 3 months.</p>
+        </div>
+        <div class="why-card reveal" data-delay="1">
+          <div class="why-num">02</div>
+          <h3>Fast & Reliable Delivery</h3>
+          <p>Deadlines are commitments, not suggestions. I plan realistic timelines and stick to them, always.</p>
+        </div>
+        <div class="why-card reveal" data-delay="2">
+          <div class="why-num">03</div>
+          <h3>Direct Communication</h3>
+          <p>You talk to me. Not an account manager, not a support bot. Just the person building your product.</p>
+        </div>
+        <div class="why-card reveal" data-delay="3">
+          <div class="why-num">04</div>
+          <h3>Business-First Thinking</h3>
+          <p>I care about your results, not just the UI. Every decision is made with your business goals in mind.</p>
+        </div>
+        <div class="why-card reveal" data-delay="4">
+          <div class="why-num">05</div>
+          <h3>Scalable Solutions</h3>
+          <p>Built to grow with you. Architecture decisions are made for the long run, not just the initial MVP.</p>
+        </div>
+        <div class="why-card reveal" data-delay="5">
+          <div class="why-num">06</div>
+          <h3>Attention to Detail</h3>
+          <p>Pixel-perfect UI, smooth animations, edge case handling — the small things that separate good from great.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process" class="process section">
+    <div class="container">
+      <div class="section-label reveal">How It Works</div>
+      <h2 class="section-title reveal">The Process</h2>
+      <p class="section-sub reveal">A clear, structured workflow so you always know what's happening and what's coming next.</p>
+      <div class="process-steps">
+        <div class="process-step reveal" data-delay="0">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Requirement Discussion</h3>
+            <p>We start with a real conversation — your goals, timeline, budget, and vision. No assumptions.</p>
+          </div>
+        </div>
+        <div class="process-step reveal" data-delay="1">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Planning & Strategy</h3>
+            <p>I define the scope, pick the tech stack, and build a clear plan with milestones before a line is written.</p>
+          </div>
+        </div>
+        <div class="process-step reveal" data-delay="2">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Design & Structure</h3>
+            <p>Wireframes, layout structure, and design direction finalized. You know exactly what you're getting.</p>
+          </div>
+        </div>
+        <div class="process-step reveal" data-delay="3">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Development</h3>
+            <p>Clean, well-organized code written in focused sprints. Regular updates so you're never in the dark.</p>
+          </div>
+        </div>
+        <div class="process-step reveal" data-delay="4">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <h3>Testing & Fixes</h3>
+            <p>Thorough testing across devices and edge cases. Bugs caught and fixed before they ever reach you.</p>
+          </div>
+        </div>
+        <div class="process-step reveal" data-delay="5">
+          <div class="step-num">06</div>
+          <div class="step-content">
+            <h3>Deployment & Support</h3>
+            <p>Launch handled end-to-end. Post-launch support available so nothing breaks in silence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section id="portfolio" class="portfolio section">
+    <div class="container">
+      <div class="section-label reveal">Featured Work</div>
+      <h2 class="section-title reveal">Projects</h2>
+      <p class="section-sub reveal">Real apps. Real users. Real problems solved.</p>
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card featured reveal">
+          <div class="card-header">
+            <div class="card-num">01</div>
+            <div class="card-badge">Final Year Project</div>
+          </div>
+          <h3>TrackMate</h3>
+          <p class="card-sub">Real-Time Bus Tracking System</p>
+          <p class="card-desc">A production-level mobile application built to enhance student safety through live GPS tracking and seamless communication. Deployed and used in real educational environments.</p>
+          <ul class="card-features">
+            <li>Live GPS tracking with map integration</li>
+            <li>QR-based student check-in system</li>
+            <li>Automated SMS alerts for parents</li>
+            <li>Role-based access: admin, staff, students</li>
+          </ul>
+          <div class="card-tech">
+            <span>Flutter</span><span>Firebase</span><span>OpenStreetMap</span><span>GPS</span><span>QR Code</span><span>SMS Alerts</span>
+          </div>
+          <a href="https://github.com/Parvmer26/Trackmate_BusTracking_System" target="_blank" rel="noopener" class="card-link">
+            View on GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <div class="portfolio-card reveal" data-delay="1">
+          <div class="card-header"><div class="card-num">02</div></div>
+          <h3>Linqdrop</h3>
+          <p class="card-sub">Offline P2P Sharing App</p>
+          <p class="card-desc">Peer-to-peer file sharing without internet — using Bluetooth & Wi-Fi Direct. Fast, secure, and beautifully built with Material 3.</p>
+          <ul class="card-features">
+            <li>Offline transfer via Bluetooth & Wi-Fi</li>
+            <li>QR-based quick connection pairing</li>
+            <li>Modern Material 3 UI + theme switching</li>
+          </ul>
+          <div class="card-tech"><span>Flutter</span><span>Nearby Connections</span><span>QR Pairing</span><span>Material 3</span></div>
+          <a href="https://github.com/Parvmer26/Linqdrop" target="_blank" rel="noopener" class="card-link">
+            View on GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <div class="portfolio-card reveal" data-delay="2">
+          <div class="card-header"><div class="card-num">03</div></div>
+          <h3>ClimateIQ</h3>
+          <p class="card-sub">Weather Application</p>
+          <p class="card-desc">Location-aware weather app with real-time data, GPS auto-detection, Lottie animations, and thorough error handling for a polished experience.</p>
+          <ul class="card-features">
+            <li>Auto GPS location detection</li>
+            <li>Real-time weather data updates</li>
+            <li>Smooth Lottie animations throughout</li>
+          </ul>
+          <div class="card-tech"><span>Flutter</span><span>WeatherAPI</span><span>GPS</span><span>Lottie</span><span>Dart</span></div>
+          <a href="https://github.com/Parvmer26/ClimateIQ" target="_blank" rel="noopener" class="card-link">
+            View on GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <div class="portfolio-card reveal" data-delay="3">
+          <div class="card-header"><div class="card-num">04</div></div>
+          <h3>Cartify</h3>
+          <p class="card-sub">E-Commerce UI</p>
+          <p class="card-desc">Modern Flutter e-commerce interface with dynamic product listings, smooth transitions, and scalable state management — a solid foundation for retail apps.</p>
+          <ul class="card-features">
+            <li>Dynamic product grid & listings</li>
+            <li>Cart functionality with state management</li>
+            <li>Smooth navigation & transitions</li>
+          </ul>
+          <div class="card-tech"><span>Flutter</span><span>Dart</span><span>State Management</span><span>GridView</span></div>
+          <a href="https://github.com/Parvmer26/EcommerceApp" target="_blank" rel="noopener" class="card-link">
+            View on GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Experience Banner -->
+      <div class="experience-banner reveal">
+        <div class="exp-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <div class="exp-content">
+          <h3>Real-World Experience</h3>
+          <p>Beyond personal projects a <strong>4-month professional internship</strong> at Divine IT Solutions where I worked on live client projects, shipped 6–7 production apps, published to Play Store & App Store, and built real systems under real pressure.</p>
+        </div>
+        <div class="exp-stats">
+          <div class="exp-stat"><span>6–7</span><small>Apps Shipped</small></div>
+          <div class="exp-stat"><span>4mo</span><small>Internship Duration</small></div>
+          <div class="exp-stat"><span>2</span><small>Store Publishes</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section id="cta" class="cta-section">
+    <div class="cta-mesh"></div>
+    <div class="cta-grid-lines"></div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <div class="section-label">Ready to Build?</div>
+        <h2>Have an idea or need a solution?<br /><span class="gradient-word">Let's build it.</span></h2>
+        <p>Whether you have a clear brief or just a rough concept — reach out. We'll figure out the rest together, fast.</p>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-primary">
+            <span>Start a Project</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/919429576276" target="_blank" rel="noopener" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:17px;height:17px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-label reveal">Get In Touch</div>
+      <h2 class="section-title reveal">Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-left reveal from-left">
+          <p class="body-text">Have a project in mind? Want to discuss a collaboration? Reach out through any channel — I respond fast and take every project seriously.</p>
+          <div class="contact-channels">
+            <a href="mailto:parvmer32@gmail.com" class="channel-item">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span class="channel-label">Email</span>
+                <span class="channel-value">parvmer32@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://wa.me/919429576276" target="_blank" rel="noopener" class="channel-item">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div>
+                <span class="channel-label">WhatsApp</span>
+                <span class="channel-value">+91 94295 76276</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/parvmer26" target="_blank" rel="noopener" class="channel-item">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div>
+                <span class="channel-label">LinkedIn</span>
+                <span class="channel-value">linkedin.com/in/parvmer26</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal from-right">
+          <form id="contactForm" class="contact-form" novalidate>
+  
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="user_name" 
+        placeholder="Your name" 
+        required 
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="user_email" 
+        placeholder="your@email.com" 
+        required 
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <input 
+      type="text" 
+      id="subject" 
+      name="subject" 
+      placeholder="What's this about?" 
+      required 
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea 
+      id="message" 
+      name="message" 
+      rows="5" 
+      placeholder="Tell me about your project..." 
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+    <span class="btn-text">Send Message</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+    </svg>
+  </button>
+
+  <div id="formMsg" class="form-msg"></div>
+
+</form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">SYMPLYN</a>
+          <p>Independent development studio.<br />Building clean, scalable digital products.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#process">Process</a>
+            <a href="#portfolio">Work</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="https://github.com/Parvmer26" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/parvmer26" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://wa.me/919429576276" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="mailto:parvmer32@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Symplyn. All rights reserved.</p>
+        <p>Designed & built by <strong>Parv Mer</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+
+<script>
+(function () {
+
+  // ❌ Skip mobile & tablets
+  if (window.innerWidth <= 1024) return;
+
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement("script");
+      s.src = src;
+      s.async = true;
+      s.onload = resolve;
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
+  }
+
+  function initVanta() {
+    try {
+      if (!window.VANTA || !window.THREE) {
+        console.warn("Vanta or THREE not loaded");
+        return;
+      }
+
+      VANTA.NET({
+        el: "#home",
+
+        mouseControls: false,
+        touchControls: false,
+        gyroControls: false,
+
+        scale: 1.0,
+        scaleMobile: 1.0,
+
+        color: 0x7aa2ff,
+        backgroundColor: 0xfaf9f6,
+
+        // 🔥 SAFE + SMOOTH SETTINGS (NO CRASH)
+        points: 7.0,
+        maxDistance: 20.0,
+        spacing: 18.0
+      });
+
+      console.log("✅ Vanta working");
+
+    } catch (e) {
+      console.error("❌ Vanta crashed", e);
+
+      // fallback background (important)
+      document.getElementById("home").style.background =
+        "linear-gradient(135deg, #f5f7ff, #eef2ff)";
+    }
+  }
+
+  // ✅ Load scripts in correct order
+  loadScript("https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js")
+    .then(() => loadScript("https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"))
+    .then(() => {
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(initVanta);
+      } else {
+        setTimeout(initVanta, 300);
+      }
+    })
+    .catch((err) => {
+      console.error("Script load failed", err);
+    });
+
+})();
+</script>
+
+</body>
+</html>
