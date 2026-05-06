@@ -266,51 +266,140 @@ function triggerHeroReveal() {
 const contactForm = document.getElementById("contactForm");
 const submitBtn = document.getElementById("submitBtn");
 
+// ===== EMAIL VALIDATION =====
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+}
+
+// ===== BUTTON STATE HELPERS =====
+function disableBtn() {
+  submitBtn.disabled = true;
+  submitBtn.classList.add("btn-disabled");
+  submitBtn.style.opacity = "0.45";
+  submitBtn.style.cursor = "not-allowed";
+}
+
+function enableBtn() {
+  submitBtn.disabled = false;
+  submitBtn.classList.remove("btn-disabled");
+  submitBtn.style.opacity = "";
+  submitBtn.style.cursor = "";
+}
+
+// ===== FORM VALIDITY CHECK =====
+function checkFormValidity() {
+  if (!contactForm || !submitBtn) return;
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  const allFilled = name !== "" && email !== "" && subject !== "" && message !== "";
+  const emailValid = isValidEmail(email);
+
+  if (allFilled && emailValid) {
+    enableBtn();
+  } else {
+    disableBtn();
+  }
+}
+
+// ===== MAIN LOGIC =====
 if (contactForm && submitBtn) {
+
+  // Disable button on page load
+  disableBtn();
+
+  const fields = ["name", "email", "subject", "message"];
+
+  fields.forEach((id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    // Manual typing
+    el.addEventListener("input", checkFormValidity);
+
+    // Autofill dropdown selection
+    el.addEventListener("change", checkFormValidity);
+
+    // Tab away / click away
+    el.addEventListener("blur", () => {
+      checkFormValidity();
+      // Show red border if email is invalid on blur
+      if (id === "email") {
+        const val = el.value.trim();
+        if (val !== "" && !isValidEmail(val)) {
+          el.classList.add("input-error");
+        } else {
+          el.classList.remove("input-error");
+        }
+      }
+    });
+
+    // Chrome silent autofill detection via CSS animation
+    el.addEventListener("animationstart", (e) => {
+      if (e.animationName === "onAutoFillStart") {
+        checkFormValidity();
+      }
+    });
+  });
+
+  // ===== FORM SUBMIT =====
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    submitBtn.disabled = true;
+    // Final guard — double check email before sending
+    const emailVal = document.getElementById("email").value.trim();
+    if (!isValidEmail(emailVal)) {
+      document.getElementById("email").classList.add("input-error");
+      return;
+    }
+
+    // Show sending state
+    disableBtn();
     submitBtn.querySelector(".btn-text").innerText = "Sending...";
 
-    emailjs.sendForm("service_74fw2mo", "template_5ojfi5r", this)
+    emailjs
+      .sendForm("service_74fw2mo", "template_5ojfi5r", this)
       .then(() => {
 
-       Swal.fire({
-  title: "Message Sent.",
-  text: "I’ll get back to you soon.",
-  icon: "success",
-  confirmButtonText: "Got it",
+        // Success popup
+        Swal.fire({
+          title: "Message Sent.",
+          text: "I'll get back to you soon.",
+          icon: "success",
+          confirmButtonText: "Got it",
+          background: "#FAF9F6",
+          color: "#1A1A1A",
+          confirmButtonColor: "#6C63FF",
+          backdrop: "rgba(0,0,0,0.5)",
+          customClass: {
+            popup: "symplyn-popup",
+            confirmButton: "symplyn-btn",
+          },
+        });
 
-  background: "#FAF9F6",
-  color: "#1A1A1A",
-
-  confirmButtonColor: "#6C63FF",
-
-  backdrop: "rgba(0,0,0,0.5)",
-
-  customClass: {
-    popup: "symplyn-popup",
-    confirmButton: "symplyn-btn"
-  }
-});
-
+        // Reset form and button to clean disabled state
         contactForm.reset();
-        submitBtn.querySelector(".btn-text").innerText = "Send Message";
-        submitBtn.disabled = false;
+        submitBtn.querySelector(".btn-text").innerText = "Send an Email";
+        disableBtn();
+        document.getElementById("email").classList.remove("input-error");
       })
       .catch((err) => {
         console.error(err);
 
+        // Error popup
         Swal.fire({
           title: "Failed",
           text: "Try again.",
           icon: "error",
-          confirmButtonColor: "#6C63FF"
+          confirmButtonColor: "#6C63FF",
         });
 
-        submitBtn.querySelector(".btn-text").innerText = "Send Message";
-        submitBtn.disabled = false;
+        // Re-enable so user can retry
+        submitBtn.querySelector(".btn-text").innerText = "Send an Email";
+        enableBtn();
       });
   });
 }

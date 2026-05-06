@@ -957,3 +957,24 @@ body {
   font-weight: 600 !important;
   letter-spacing: 0.3px;
 }
+
+/* ===== DISABLED BUTTON STATE ===== */
+.btn.btn-primary.btn-disabled,
+.btn.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none; /* prevents hover effects */
+  filter: grayscale(20%);
+}
+
+/* ===== EMAIL INPUT ERROR STATE ===== */
+input.input-error {
+  border-color: #e53e3e !important;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.15) !important;
+  background-color: #fff5f5 !important;
+}
+
+input.input-error:focus {
+  border-color: #e53e3e !important;
+  outline: none;
+}
